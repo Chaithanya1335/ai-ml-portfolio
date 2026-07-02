@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gnana Chaithanya — Deep Learning Engineer | Agentic AI &amp; GenAI Specialist</title>
+<meta name="description" content="Freelance Deep Learning Engineer specializing in production LLM systems, multi-agent pipelines, RAG architectures, and predictive ML. Available for freelance and contract AI engineering work." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23181433'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3EGC%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg style="display:none">
+  <symbol id="icon-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4a3 3 0 0 0-3 3v.3A3 3 0 0 0 4 10v1a3 3 0 0 0 1 2.2A3 3 0 0 0 7 19a3 3 0 0 0 5-2v-1M9 4a3 3 0 0 1 3 3v10a3 3 0 0 1-5 2M9 4v13"/><path d="M15 4a3 3 0 0 1 3 3v.3a3 3 0 0 1 2 2.7v1a3 3 0 0 1-1 2.2 3 3 0 0 1-2 4.8 3 3 0 0 1-5-2v-1M15 4a3 3 0 0 0-3 3v10a3 3 0 0 0 5 2M15 4v13"/></symbol>
+  <symbol id="icon-agents" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M6 8.4V13a2 2 0 0 0 2 2h1.5M18 8.4V13a2 2 0 0 1-2 2h-1.5"/></symbol>
+  <symbol id="icon-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="4" width="17" height="6" rx="1.6"/><rect x="3.5" y="14" width="17" height="6" rx="1.6"/><circle cx="7" cy="7" r=".8" fill="currentColor" stroke="none"/><circle cx="7" cy="17" r=".8" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="icon-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 18a4.5 4.5 0 0 1-.7-8.94A5.5 5.5 0 0 1 17 9.5a4 4 0 0 1-.6 8H7Z"/></symbol>
+  <symbol id="icon-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="7.5" ry="2.8"/><path d="M4.5 6v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V6"/><path d="M4.5 12v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></symbol>
+  <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+  <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9.98h4v10.52H3zM10 9.98h3.8v1.44h.06c.53-.98 1.83-2.02 3.77-2.02 4.03 0 4.77 2.53 4.77 5.82v5.28h-4v-4.68c0-1.12-.02-2.56-1.57-2.56-1.57 0-1.81 1.2-1.81 2.48v4.76h-4Z"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h3.2l1.3 4.5-2 1.5a12 12 0 0 0 6.5 6.5l1.5-2 4.5 1.3V19a2 2 0 0 1-2.2 2C10 20.6 3.4 14 3 6.2A2 2 0 0 1 5 4Z"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5.5 5.5L20 7"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 6h17M3.5 12h17M3.5 18h17"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+</svg>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__brand">GC<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <a href="#contact" class="btn btn--sm btn--primary">Hire Me</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <svg width="22" height="22"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="container hero__inner">
+      <div class="hero__text reveal">
+        <p class="eyebrow"><span class="dot-live"></span> Available for freelance &amp; contract work</p>
+        <h1>Building production <span class="text-gradient">LLM systems</span> &amp; <span class="text-gradient">AI agents</span> that ship.</h1>
+        <p class="hero__lede">
+          I'm Gnana Chaithanya — a Deep Learning Engineer with 2+ years turning open-ended AI ideas into
+          reliable, production-grade systems: RAG pipelines, multi-agent workflows, computer vision, and
+          predictive ML, deployed end-to-end across education, healthcare, manufacturing, and enterprise automation.
+        </p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--primary">Start a project <svg width="16" height="16"><use href="#icon-arrow"/></svg></a>
+          <a href="#projects" class="btn btn--ghost">See my work</a>
+        </div>
+        <div class="hero__stats">
+          <div><strong>2+</strong><span>Years building production AI</span></div>
+          <div><strong>10+</strong><span>End-to-end AI systems shipped</span></div>
+          <div><strong>4</strong><span>Industries: edu, health, mfg, enterprise</span></div>
+        </div>
+      </div>
+      <div class="hero__media reveal">
+        <div class="hero__photo-wrap">
+          <img src="assets/photo.jpg" alt="Portrait of Gnana Chaithanya" class="hero__photo" width="440" height="440" />
+          <span class="badge-float badge-float--1">🧠 GenAI &amp; Agents</span>
+          <span class="badge-float badge-float--2">⚡ RAG &amp; Retrieval</span>
+          <span class="badge-float badge-float--3">🚀 MLOps Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOGOS / STACK STRIP ===== -->
+  <section class="strip">
+    <div class="container">
+      <p class="strip__label">Core stack I build with</p>
+      <div class="strip__row">
+        <span>Gemini 2.5 Pro</span><span>GPT-4o</span><span>LangChain</span><span>LangGraph</span>
+        <span>CrewAI</span><span>FastAPI</span><span>PyTorch</span><span>Docker</span>
+        <span>AWS</span><span>PostgreSQL</span><span>FAISS</span><span>Celery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container about__grid">
+      <div class="reveal">
+        <p class="section__eyebrow">About</p>
+        <h2 class="section__title">I build the AI systems clients actually ship to production.</h2>
+      </div>
+      <div class="about__body reveal">
+        <p>
+          Most "AI projects" die in a notebook. My focus is the operational gap most builders skip: reproducible
+          pipelines, versioned models, observability, and deployments that survive real traffic. Over the last two
+          years at <strong>DataToBiz</strong> and <strong>AISPRY</strong> I've shipped automated grading systems
+          processing 1,000+ documents per cycle, multi-provider LLM abstractions with automatic failover, voice/chat
+          interfaces at sub-200ms latency, and predictive maintenance models that cut unplanned failures by 15%.
+        </p>
+        <p>
+          I work across the full stack of modern AI engineering — from prompt engineering and RAG architecture, to
+          LangGraph/CrewAI multi-agent orchestration, to the FastAPI + Celery + Docker backbone that makes it all
+          reliable in production. If you need an AI system that works on day one and still works on day 300, that's
+          the work I do.
+        </p>
+        <ul class="about__points">
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> End-to-end delivery: scoping → architecture → build → deploy → monitor</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Comfortable owning ambiguous, open-ended AI problems</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Clear async communication &amp; documentation for remote/freelance work</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="reveal">
+        <p class="section__eyebrow">Skills</p>
+        <h2 class="section__title">Everything needed to take an AI product from idea to production.</h2>
+      </div>
+      <div class="skills__grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon"><svg width="22" height="22"><use href="#icon-brain"/></svg></div>
+          <h3>LLMs &amp; Generative AI</h3>
+          <div class="tags">
+            <span>GPT-4 / 4o</span><span>Gemini 2.5 Pro / Vision</span><span>LLaMA 3</span><span>Mistral</span>
+            <span>Claude API</span><span>RAG</span><span>Prompt Engineering</span><span>QLoRA / Fine-tuning</span>
+            <span>Pydantic / Instructor</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon"><svg width="22" height="22"><use href="#icon-agents"/></svg></div>
+          <h3>Agent Frameworks</h3>
+          <div class="tags">
+            <span>LangChain</span><span>LangGraph</span><span>CrewAI</span><span>AutoGen</span>
+            <span>Multi-Agent Orchestration</span><span>n8n</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon"><svg width="22" height="22"><use href="#icon-server"/></svg></div>
+          <h3>Backend &amp; Async Systems</h3>
+          <div class="tags">
+            <span>FastAPI</span><span>Flask</span><span>Celery</span><span>Redis</span>
+            <span>WebRTC</span><span>SSE Streaming</span><span>REST API Design</span><span>Node.js / Express</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon"><svg width="22" height="22"><use href="#icon-eye"/></svg></div>
+          <h3>Deep Learning &amp; Computer Vision</h3>
+          <div class="tags">
+            <span>TensorFlow</span><span>PyTorch</span><span>CNN</span><span>YOLOv8</span>
+            <span>BiLSTM</span><span>Autoencoders</span><span>SHAP</span><span>LIME</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon"><svg width="22" height="22"><use href="#icon-cloud"/></svg></div>
+          <h3>Cloud &amp; MLOps</h3>
+          <div class="tags">
+            <span>Docker</span><span>MLflow</span><span>GitHub Actions CI/CD</span><span>Airflow</span>
+            <span>AWS (S3, EC2, ECR)</span><span>GCP (Document AI, Vision AI)</span><span>Azure Blob</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon"><svg width="22" height="22"><use href="#icon-data"/></svg></div>
+          <h3>Data &amp; Vector Stores</h3>
+          <div class="tags">
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>SQLite</span>
+            <span>Pinecone</span><span>ChromaDB</span><span>FAISS</span><span>Milvus</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills__extra reveal">
+        <div>
+          <h4>Languages &amp; Tooling</h4>
+          <p>Python (Advanced) · SQL · Node.js/Express · Git · Streamlit · Docker Compose</p>
+        </div>
+        <div>
+          <h4>Client-facing / Freelance Skills</h4>
+          <p>Requirement scoping · Technical documentation · Async communication · Agile delivery · Cost-aware architecture</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="reveal">
+        <p class="section__eyebrow">Services</p>
+        <h2 class="section__title">What I can build for you</h2>
+        <p class="section__subtitle">Fixed-scope builds or ongoing contract work — pick what fits your project.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card reveal">
+          <div class="service-card__icon"><svg width="24" height="24"><use href="#icon-brain"/></svg></div>
+          <h3>RAG &amp; Knowledge Assistants</h3>
+          <p>Hybrid vector + keyword retrieval systems, document Q&amp;A, and internal knowledge bots tuned for accuracy over your data.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon"><svg width="24" height="24"><use href="#icon-agents"/></svg></div>
+          <h3>AI Agents &amp; Automation</h3>
+          <p>Multi-agent workflows with LangGraph/CrewAI that plan, research, and execute multi-step business tasks.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon"><svg width="24" height="24"><use href="#icon-server"/></svg></div>
+          <h3>LLM Product Integration</h3>
+          <p>Wiring GPT-4o/Gemini/Claude into real products — structured outputs, multi-provider failover, streaming UX.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon"><svg width="24" height="24"><use href="#icon-eye"/></svg></div>
+          <h3>Computer Vision Solutions</h3>
+          <p>Detection, classification, and image-analysis models — from YOLOv8 pipelines to medical/industrial imaging.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon"><svg width="24" height="24"><use href="#icon-data"/></svg></div>
+          <h3>Predictive ML</h3>
+          <p>Forecasting, anomaly detection, and predictive maintenance models with explainability (SHAP/LIME) built in.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon"><svg width="24" height="24"><use href="#icon-cloud"/></svg></div>
+          <h3>MLOps &amp; Deployment</h3>
+          <p>Take a notebook to production: Docker, CI/CD, model registries, and cloud deployment on AWS/GCP/Azure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <div class="reveal">
+        <p class="section__eyebrow">Selected Work</p>
+        <h2 class="section__title">Client work &amp; case studies</h2>
+      </div>
+      <div class="case-grid">
+        <div class="case-card reveal">
+          <span class="case-card__tag">Education · GenAI Vision</span>
+          <h3>Automated Grading System</h3>
+          <p>5-stage async pipeline (Flask + Celery + Redis) grading handwritten exam scripts via Gemini 2.5 Pro Vision — parsing, LLM evaluation, and annotated PDF generation.</p>
+          <div class="case-card__stats">
+            <div><strong>1,000+</strong><span>scripts / cycle</span></div>
+            <div><strong>92%</strong><span>marking consistency</span></div>
+            <div><strong>Days→Min</strong><span>turnaround</span></div>
+          </div>
+        </div>
+        <div class="case-card reveal">
+          <span class="case-card__tag">Media &amp; Marketing · Multi-LLM</span>
+          <h3>AI Persona Emulation Engine</h3>
+          <p>6-stage async LLM pipeline generating synthetic brand personas, with multi-provider abstraction (GPT-4o, Claude, Gemini, Perplexity) and automatic failover.</p>
+          <div class="case-card__stats">
+            <div><strong>70%</strong><span>faster persona workflows</span></div>
+            <div><strong>4</strong><span>LLM providers unified</span></div>
+            <div><strong>Docker</strong><span>+ PostgreSQL + Azure</span></div>
+          </div>
+        </div>
+        <div class="case-card reveal">
+          <span class="case-card__tag">Healthcare / Manufacturing · Predictive ML</span>
+          <h3>BMR Predictive Maintenance</h3>
+          <p>9-stage ML pipeline (BiLSTM + Autoencoder) for early prediction of medical device failures, served via FastAPI + Streamlit with SHAP explainability dashboards.</p>
+          <div class="case-card__stats">
+            <div><strong>-15%</strong><span>unplanned failures</span></div>
+            <div><strong>+40%</strong><span>faster root-cause diagnosis</span></div>
+            <div><strong>SHAP</strong><span>explainability built-in</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:4rem;">
+        <p class="section__eyebrow">Open Source</p>
+        <h2 class="section__title">Personal projects</h2>
+        <p class="section__subtitle">Built to stress-test specific engineering problems, not just for a portfolio.</p>
+      </div>
+
+      <div class="filters reveal" id="filters">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="rag">RAG &amp; Retrieval</button>
+        <button class="filter-btn" data-filter="agents">Agents</button>
+        <button class="filter-btn" data-filter="vision">Vision / Medical</button>
+        <button class="filter-btn" data-filter="mlops">MLOps</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <!-- injected by js/script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="reveal">
+        <p class="section__eyebrow">Experience</p>
+        <h2 class="section__title">Where I've built this</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <p class="timeline__date">Jan 2026 — Present</p>
+            <h3>Deep Learning Engineer · DataToBiz</h3>
+            <p>Owning production LLM systems end-to-end: automated grading at scale, multi-provider persona generation, and a sub-200ms voice/chat interface on WebRTC + Retell AI.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <p class="timeline__date">Jul 2025 — Dec 2025</p>
+            <h3>AI Engineer Intern · DataToBiz</h3>
+            <p>Shipped a BiLSTM/Autoencoder predictive maintenance pipeline, a 3-agent CrewAI pitch-deck generator, and a GPT-4o sales-intelligence synthesis engine over 12+ data sources.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <p class="timeline__date">Mar 2024 — Mar 2025</p>
+            <h3>Data Science Intern · AISPRY</h3>
+            <p>Medical imaging (YOLOv8, custom CNNs), legal-document clause extraction, LSTM demand forecasting, and driver-emotion detection research.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-cert reveal">
+        <div class="edu-cert__col">
+          <h4>Education</h4>
+          <p><strong>B.Tech, Computer Science (AI &amp; ML)</strong><br/>Siddharth Institute of Engineering and Technology · 2020–2024 · CGPA 8.17/10</p>
+        </div>
+        <div class="edu-cert__col">
+          <h4>Certifications</h4>
+          <div class="tags">
+            <span>AI &amp; Deep Learning — 360DigiTMG</span>
+            <span>Data Science — 360DigiTMG</span>
+            <span>Python for Data Science — 360DigiTMG</span>
+            <span>SQL for Data Analysis — 360DigiTMG</span>
+            <span>Power BI — 360DigiTMG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--cta" id="contact">
+    <div class="container cta__inner reveal">
+      <p class="section__eyebrow">Contact</p>
+      <h2 class="section__title">Have an AI system you need built or fixed?</h2>
+      <p class="section__subtitle">I take on freelance and contract projects in GenAI, agentic systems, RAG, and applied ML. Tell me what you're building — I'll reply within a day.</p>
+      <div class="cta__actions">
+        <a href="mailto:gnanachaithanyamangammagari@gmail.com?subject=Freelance%20project%20inquiry" class="btn btn--primary btn--lg">
+          <svg width="18" height="18"><use href="#icon-mail"/></svg> gnanachaithanyamangammagari@gmail.com
+        </a>
+      </div>
+      <div class="cta__links">
+        <a href="tel:+917670918038"><svg width="18" height="18"><use href="#icon-phone"/></svg> +91 76709 18038</a>
+        <a href="#" id="githubLink" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#icon-github"/></svg> GitHub</a>
+        <a href="#" id="linkedinLink" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#icon-linkedin"/></svg> LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#top" class="nav__brand">GC<span>.</span></a>
+    <p>© <span id="year"></span> Mangammagari Gnana Chaithanya. Built for freelance AI/ML engineering work.</p>
+    <div class="footer__socials">
+      <a href="#" id="githubLink2" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18"><use href="#icon-github"/></svg></a>
+      <a href="#" id="linkedinLink2" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18"><use href="#icon-linkedin"/></svg></a>
+      <a href="mailto:gnanachaithanyamangammagari@gmail.com" aria-label="Email"><svg width="18" height="18"><use href="#icon-mail"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg width="18" height="18" style="transform:rotate(-90deg)"><use href="#icon-arrow"/></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
