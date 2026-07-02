@@ -158,9 +158,10 @@ button { font-family: inherit; cursor: pointer; }
   animation: float 5s ease-in-out infinite;
   box-shadow: 0 10px 24px -10px rgba(0,0,0,0.6);
 }
-.badge-float--1 { top: 4%; left: -8%; animation-delay: 0s; }
-.badge-float--2 { bottom: 14%; right: -12%; animation-delay: 1.2s; }
-.badge-float--3 { bottom: -3%; left: 4%; animation-delay: 2.4s; }
+.badge-float--1 { top: 2%; left: -12%; animation-delay: 0s; }
+.badge-float--2 { top: 34%; right: -18%; animation-delay: 0.9s; }
+.badge-float--3 { bottom: 14%; right: -10%; animation-delay: 1.8s; }
+.badge-float--4 { bottom: -4%; left: 2%; animation-delay: 2.7s; }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 /* ===================== Stack strip ===================== */
