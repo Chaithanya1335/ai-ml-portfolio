@@ -16,10 +16,12 @@ ycbcr = img.convert("YCbCr")
 y, cb, cr = ycbcr.split()
 y = ImageOps.autocontrast(y, cutoff=1)
 enhanced = Image.merge("YCbCr", (y, cb, cr)).convert("RGB")
-enhanced = ImageEnhance.Color(enhanced).enhance(1.06)
-enhanced = ImageEnhance.Contrast(enhanced).enhance(1.05)
+enhanced = ImageEnhance.Color(enhanced).enhance(1.08)
+enhanced = ImageEnhance.Contrast(enhanced).enhance(1.06)
 enhanced = ImageEnhance.Brightness(enhanced).enhance(1.02)
-enhanced = enhanced.filter(ImageFilter.UnsharpMask(radius=2, percent=80, threshold=2))
+# Two-pass sharpen: fine detail pass + a slightly wider pass for overall clarity
+enhanced = enhanced.filter(ImageFilter.UnsharpMask(radius=1.4, percent=140, threshold=2))
+enhanced = enhanced.filter(ImageFilter.UnsharpMask(radius=3.5, percent=60, threshold=3))
 
 # Square crop: full width, positioned to keep headroom above hair + show shoulders
 crop_top = int(0.0 * h)
@@ -28,6 +30,6 @@ if crop_top + crop_size > h:
     crop_top = h - crop_size
 square = enhanced.crop((0, crop_top, w, crop_top + crop_size))
 
-square_hires = square.resize((1200, 1200), Image.LANCZOS)
-square_hires.save(OUT_AVATAR, quality=92, optimize=True)
-print("Saved", OUT_AVATAR, square_hires.size)
+# Keep native resolution (no upscale) to avoid interpolation softness
+square.save(OUT_AVATAR, quality=95, optimize=True)
+print("Saved", OUT_AVATAR, square.size)
