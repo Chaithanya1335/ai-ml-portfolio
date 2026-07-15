@@ -5,13 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Gnana Chaithanya — Deep Learning Engineer | Agentic AI &amp; GenAI Specialist</title>
 <meta name="description" content="Deep Learning Engineer specializing in production LLM systems, multi-agent pipelines, RAG architectures, and predictive ML." />
+<meta name="author" content="Mangammagari Gnana Chaithanya" />
+<meta name="theme-color" content="#05070d" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gnana Chaithanya — Deep Learning Engineer | Agentic AI &amp; GenAI Specialist" />
+<meta property="og:description" content="Production LLM systems, multi-agent workflows, RAG architectures, computer vision, and predictive ML — built end-to-end." />
+<meta property="og:image" content="assets/photo.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gnana Chaithanya — Deep Learning Engineer" />
+<meta name="twitter:description" content="Production LLM systems, multi-agent workflows, RAG, and predictive ML — built end-to-end." />
+<meta name="twitter:image" content="assets/photo.jpg" />
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23181433'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3EGC%3C/text%3E%3C/svg%3E" />
+
+<!-- Set theme before paint to avoid flash of the wrong theme -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  })();
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css?v=2" />
 </head>
 <body>
+
+<a href="#top" class="skip-link">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- Icon sprite -->
 <svg style="display:none">
@@ -29,6 +60,9 @@
   <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5.5 5.5L20 7"/></symbol>
   <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 6h17M3.5 12h17M3.5 18h17"/></symbol>
   <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+  <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+  <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
 </svg>
 
 <div class="noise-overlay" aria-hidden="true"></div>
@@ -46,6 +80,10 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light / dark theme">
+        <svg class="icon-sun" width="19" height="19"><use href="#icon-sun"/></svg>
+        <svg class="icon-moon" width="18" height="18"><use href="#icon-moon"/></svg>
+      </button>
       <a href="#contact" class="btn btn--sm btn--primary">Contact</a>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
         <svg width="22" height="22"><use href="#icon-menu"/></svg>
@@ -58,6 +96,7 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
+    <div class="hero__bg-grid" aria-hidden="true"></div>
     <div class="hero__glow hero__glow--1"></div>
     <div class="hero__glow hero__glow--2"></div>
     <div class="container hero__inner">
@@ -72,11 +111,14 @@
         <div class="hero__cta">
           <a href="#contact" class="btn btn--primary">Get in touch <svg width="16" height="16"><use href="#icon-arrow"/></svg></a>
           <a href="#projects" class="btn btn--ghost">See my work</a>
+          <a href="assets/Gnana_Chaithanya_Resume_2026.pdf" class="btn btn--ghost" download="Gnana_Chaithanya_Resume_2026.pdf">
+            <svg width="16" height="16"><use href="#icon-download"/></svg> Download CV
+          </a>
         </div>
         <div class="hero__stats">
-          <div><strong>2+</strong><span>Years building production AI</span></div>
-          <div><strong>10+</strong><span>End-to-end AI systems built</span></div>
-          <div><strong>4</strong><span>Industries: edu, health, mfg, enterprise</span></div>
+          <div><strong data-count="2" data-suffix="+">2+</strong><span>Years building production AI</span></div>
+          <div><strong data-count="10" data-suffix="+">10+</strong><span>End-to-end AI systems built</span></div>
+          <div><strong data-count="4">4</strong><span>Industries: edu, health, mfg, enterprise</span></div>
         </div>
       </div>
       <div class="hero__media reveal">
@@ -107,7 +149,7 @@
   <section class="section" id="about">
     <div class="container about__grid">
       <div class="reveal">
-        <p class="section__eyebrow">About</p>
+        <p class="section__eyebrow" data-num="01">About</p>
         <h2 class="section__title">I build AI systems that hold up in production.</h2>
       </div>
       <div class="about__body reveal">
@@ -136,7 +178,7 @@
   <section class="section section--alt" id="skills">
     <div class="container">
       <div class="reveal">
-        <p class="section__eyebrow">Skills</p>
+        <p class="section__eyebrow" data-num="02">Skills</p>
         <h2 class="section__title">Everything needed to take an AI product from idea to production.</h2>
       </div>
       <div class="skills__grid">
@@ -214,7 +256,7 @@
   <section class="section" id="services">
     <div class="container">
       <div class="reveal">
-        <p class="section__eyebrow">Focus areas</p>
+        <p class="section__eyebrow" data-num="03">Focus areas</p>
         <h2 class="section__title">What I work on</h2>
         <p class="section__subtitle">Core areas I design, build, and deploy end-to-end.</p>
       </div>
@@ -257,7 +299,7 @@
   <section class="section section--alt" id="projects">
     <div class="container">
       <div class="reveal">
-        <p class="section__eyebrow">Selected Work</p>
+        <p class="section__eyebrow" data-num="04">Selected Work</p>
         <h2 class="section__title">Selected work &amp; case studies</h2>
       </div>
       <div class="case-grid">
@@ -266,8 +308,8 @@
           <h3>Automated Grading System</h3>
           <p>5-stage async pipeline (Flask + Celery + Redis) grading handwritten exam scripts via Gemini 2.5 Pro Vision — parsing, LLM evaluation, and annotated PDF generation.</p>
           <div class="case-card__stats">
-            <div><strong>1,000+</strong><span>scripts / cycle</span></div>
-            <div><strong>92%</strong><span>marking consistency</span></div>
+            <div><strong data-count="1000" data-suffix="+">1,000+</strong><span>scripts / cycle</span></div>
+            <div><strong data-count="92" data-suffix="%">92%</strong><span>marking consistency</span></div>
             <div><strong>Days→Min</strong><span>turnaround</span></div>
           </div>
         </div>
@@ -276,8 +318,8 @@
           <h3>AI Persona Emulation Engine</h3>
           <p>6-stage async LLM pipeline generating synthetic brand personas, with multi-provider abstraction (GPT-4o, Claude, Gemini, Perplexity) and automatic failover.</p>
           <div class="case-card__stats">
-            <div><strong>70%</strong><span>faster persona workflows</span></div>
-            <div><strong>4</strong><span>LLM providers unified</span></div>
+            <div><strong data-count="70" data-suffix="%">70%</strong><span>faster persona workflows</span></div>
+            <div><strong data-count="4">4</strong><span>LLM providers unified</span></div>
             <div><strong>Docker</strong><span>+ PostgreSQL + Azure</span></div>
           </div>
         </div>
@@ -286,8 +328,8 @@
           <h3>BMR Predictive Maintenance</h3>
           <p>9-stage ML pipeline (BiLSTM + Autoencoder) for early prediction of medical device failures, served via FastAPI + Streamlit with SHAP explainability dashboards.</p>
           <div class="case-card__stats">
-            <div><strong>-15%</strong><span>unplanned failures</span></div>
-            <div><strong>+40%</strong><span>faster root-cause diagnosis</span></div>
+            <div><strong data-count="-15" data-suffix="%">-15%</strong><span>unplanned failures</span></div>
+            <div><strong data-count="40" data-prefix="+" data-suffix="%">+40%</strong><span>faster root-cause diagnosis</span></div>
             <div><strong>SHAP</strong><span>explainability built-in</span></div>
           </div>
         </div>
@@ -417,7 +459,7 @@
         </div>
 
         <div class="featured__stats">
-          <div><strong>18</strong><span>live research tools</span></div>
+          <div><strong data-count="18">18</strong><span>live research tools</span></div>
           <div><strong>LangGraph</strong><span>planner ⇄ tool loop</span></div>
           <div><strong>SSE</strong><span>streaming progress</span></div>
           <div><strong>Free-tier</strong><span>cache · rate-limit · metrics</span></div>
@@ -466,7 +508,7 @@
   <section class="section" id="experience">
     <div class="container">
       <div class="reveal">
-        <p class="section__eyebrow">Experience</p>
+        <p class="section__eyebrow" data-num="05">Experience</p>
         <h2 class="section__title">Where I've built this</h2>
         <p class="section__subtitle">Production GenAI, predictive ML, and computer vision — from intern projects to owning systems end-to-end.</p>
       </div>
@@ -595,12 +637,15 @@
   <!-- ===== CONTACT ===== -->
   <section class="section section--cta" id="contact">
     <div class="container cta__inner reveal">
-      <p class="section__eyebrow">Contact</p>
+      <p class="section__eyebrow" data-num="06">Contact</p>
       <h2 class="section__title">Let's talk about AI systems</h2>
       <p class="section__subtitle">Open to roles and collaborations in GenAI, agentic systems, RAG, and applied ML. Reach out anytime.</p>
       <div class="cta__actions">
         <a href="mailto:gnanachaithanyamangammagari@gmail.com?subject=Hello%20from%20your%20portfolio" class="btn btn--primary btn--lg">
           <svg width="18" height="18"><use href="#icon-mail"/></svg> gnanachaithanyamangammagari@gmail.com
+        </a>
+        <a href="assets/Gnana_Chaithanya_Resume_2026.pdf" class="btn btn--ghost btn--lg" download="Gnana_Chaithanya_Resume_2026.pdf">
+          <svg width="18" height="18"><use href="#icon-download"/></svg> Download résumé
         </a>
       </div>
       <div class="cta__links">
@@ -629,6 +674,6 @@
   <svg width="18" height="18" style="transform:rotate(-90deg)"><use href="#icon-arrow"/></svg>
 </button>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=2"></script>
 </body>
 </html>
