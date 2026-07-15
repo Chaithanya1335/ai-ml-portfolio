@@ -17,13 +17,6 @@ const PROJECTS = [
     link: "https://github.com/Chaithanya1335",
   },
   {
-    title: "TravelAgent — Graph-Based Multi-Agent Planner",
-    tags: ["agents"],
-    stack: "Python · Gemini Pro · LangGraph · LangChain · Flask · Bootstrap",
-    desc: "A LangGraph state graph decomposing travel requests into Research, Budgeting, Routing, and Reporting agents with conditional branching.",
-    link: "https://github.com/Chaithanya1335/TravelAgent",
-  },
-  {
     title: "MediConsult AI — Dual-Modality Medical Assistant",
     tags: ["vision", "rag"],
     stack: "Python · LangChain · Groq LLaMA3 · FAISS · HuggingFace MiniLM · YOLOv8 · Streamlit",
@@ -53,12 +46,24 @@ function renderProjects(filter) {
     const match = filter === "all" || p.tags.includes(filter);
     const card = document.createElement("div");
     card.className = "project-card reveal is-visible" + (match ? "" : " is-hidden");
+    const liveLink = p.live
+      ? `<a class="project-card__link project-card__link--live" href="${p.live}" target="_blank" rel="noopener" aria-label="Live demo">
+          <svg width="14" height="14"><use href="#icon-arrow"/></svg>
+        </a>`
+      : "";
+    const badge = p.badge ? `<span class="project-card__badge">${p.badge}</span>` : "";
     card.innerHTML = `
       <div class="project-card__head">
-        <h3>${p.title}</h3>
-        <a class="project-card__link" href="${p.link}" target="_blank" rel="noopener" aria-label="View on GitHub">
-          <svg width="16" height="16"><use href="#icon-github"/></svg>
-        </a>
+        <div>
+          ${badge}
+          <h3>${p.title}</h3>
+        </div>
+        <div class="project-card__actions">
+          ${liveLink}
+          <a class="project-card__link" href="${p.link}" target="_blank" rel="noopener" aria-label="View on GitHub">
+            <svg width="16" height="16"><use href="#icon-github"/></svg>
+          </a>
+        </div>
       </div>
       <p>${p.desc}</p>
       <div class="tags">${p.stack.split(" · ").map(t => `<span>${t}</span>`).join("")}</div>
@@ -75,6 +80,28 @@ document.getElementById("filters").addEventListener("click", (e) => {
   btn.classList.add("is-active");
   renderProjects(btn.dataset.filter);
 });
+
+// ===== Pathora featured gallery =====
+const featuredMain = document.getElementById("featuredMainImg");
+const featuredCaption = document.getElementById("featuredCaption");
+const featuredThumbs = document.getElementById("featuredThumbs");
+if (featuredThumbs && featuredMain) {
+  featuredThumbs.addEventListener("click", (e) => {
+    const thumb = e.target.closest(".featured__thumb");
+    if (!thumb) return;
+    const { src, caption } = thumb.dataset;
+    if (!src) return;
+    featuredMain.style.opacity = "0.4";
+    window.setTimeout(() => {
+      featuredMain.src = src;
+      featuredMain.alt = caption || "Pathora screenshot";
+      if (featuredCaption) featuredCaption.textContent = caption || "";
+      featuredMain.style.opacity = "1";
+    }, 120);
+    featuredThumbs.querySelectorAll(".featured__thumb").forEach((t) => t.classList.remove("is-active"));
+    thumb.classList.add("is-active");
+  });
+}
 
 // ===== Nav scroll state + mobile toggle =====
 const nav = document.getElementById("nav");
