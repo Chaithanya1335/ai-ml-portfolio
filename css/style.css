@@ -293,11 +293,11 @@ strong { color: var(--text); font-weight: 600; }
   filter: saturate(0.98) contrast(1.02);
 }
 .badge-float {
-  position: absolute; font-size: 0.78rem; font-weight: 600; color: var(--text);
+  position: absolute; z-index: 2; font-size: 0.78rem; font-weight: 600; color: var(--text);
   background: var(--bg-alt); border: 1px solid var(--border);
   padding: 8px 13px; border-radius: 999px; backdrop-filter: blur(8px);
   animation: float 5s ease-in-out infinite;
-  box-shadow: 0 10px 24px -10px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 26px -12px rgba(15, 23, 55, 0.4);
 }
 .badge-float--1 { top: 2%; left: -12%; animation-delay: 0s; }
 .badge-float--2 { top: 34%; right: -18%; animation-delay: 0.9s; }
