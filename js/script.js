@@ -38,14 +38,6 @@ const PROJECTS = [
     link: "https://github.com/Chaithanya1335",
   },
   {
-    title: "MediConsult AI — Dual-Modality Medical Assistant",
-    tags: ["vision", "rag"],
-    cover: "vision",
-    stack: "Python · LangChain · Groq LLaMA3 · FAISS · HuggingFace MiniLM · YOLOv8 · Streamlit",
-    desc: "Semantic Q&A over a medical encyclopedia plus YOLOv8 visual skin-condition screening, with multilingual support. Deployed on Vercel/Render.",
-    link: "https://github.com/Chaithanya1335/Medical_Chatbot",
-  },
-  {
     title: "TalentScout — Automated AI Recruitment Screener",
     tags: ["agents"],
     cover: "agents",
@@ -65,6 +57,7 @@ const PROJECTS = [
 
 const grid = document.getElementById("projectGrid");
 function renderProjects(filter) {
+  if (!grid) return;
   grid.innerHTML = "";
   PROJECTS.forEach(p => {
     const match = filter === "all" || p.tags.includes(filter);
@@ -109,33 +102,14 @@ function renderProjects(filter) {
 }
 renderProjects("all");
 
-document.getElementById("filters").addEventListener("click", (e) => {
-  const btn = e.target.closest(".filter-btn");
-  if (!btn) return;
-  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("is-active"));
-  btn.classList.add("is-active");
-  renderProjects(btn.dataset.filter);
-});
-
-// ===== Pathora featured gallery =====
-const featuredMain = document.getElementById("featuredMainImg");
-const featuredCaption = document.getElementById("featuredCaption");
-const featuredThumbs = document.getElementById("featuredThumbs");
-if (featuredThumbs && featuredMain) {
-  featuredThumbs.addEventListener("click", (e) => {
-    const thumb = e.target.closest(".featured__thumb");
-    if (!thumb) return;
-    const { src, caption } = thumb.dataset;
-    if (!src) return;
-    featuredMain.style.opacity = "0.4";
-    window.setTimeout(() => {
-      featuredMain.src = src;
-      featuredMain.alt = caption || "Pathora screenshot";
-      if (featuredCaption) featuredCaption.textContent = caption || "";
-      featuredMain.style.opacity = "1";
-    }, 120);
-    featuredThumbs.querySelectorAll(".featured__thumb").forEach((t) => t.classList.remove("is-active"));
-    thumb.classList.add("is-active");
+const filters = document.getElementById("filters");
+if (filters) {
+  filters.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-btn");
+    if (!btn) return;
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+    renderProjects(btn.dataset.filter);
   });
 }
 

@@ -37,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=3" />
+<link rel="stylesheet" href="css/style.css?v=9" />
 </head>
 <body>
 
@@ -63,6 +63,8 @@
   <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
   <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
   <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2Z"/></symbol>
+  <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 4h6v6M10 14 20 4M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
 </svg>
 
 <div class="noise-overlay" aria-hidden="true"></div>
@@ -300,201 +302,107 @@
     <div class="container">
       <div class="reveal">
         <p class="section__eyebrow" data-num="04">Selected Work</p>
-        <h2 class="section__title">Selected work &amp; case studies</h2>
-      </div>
-      <div class="case-grid">
-        <div class="case-card reveal">
-          <span class="case-card__tag">Education · GenAI Vision</span>
-          <h3>Automated Grading System</h3>
-          <p>5-stage async pipeline (Flask + Celery + Redis) grading handwritten exam scripts via Gemini 2.5 Pro Vision — parsing, LLM evaluation, and annotated PDF generation.</p>
-          <div class="case-card__stats">
-            <div><strong data-count="1000" data-suffix="+">1,000+</strong><span>scripts / cycle</span></div>
-            <div><strong data-count="92" data-suffix="%">92%</strong><span>marking consistency</span></div>
-            <div><strong>Days→Min</strong><span>turnaround</span></div>
-          </div>
-        </div>
-        <div class="case-card reveal">
-          <span class="case-card__tag">Media &amp; Marketing · Multi-LLM</span>
-          <h3>AI Persona Emulation Engine</h3>
-          <p>6-stage async LLM pipeline generating synthetic brand personas, with multi-provider abstraction (GPT-4o, Claude, Gemini, Perplexity) and automatic failover.</p>
-          <div class="case-card__stats">
-            <div><strong data-count="70" data-suffix="%">70%</strong><span>faster persona workflows</span></div>
-            <div><strong data-count="4">4</strong><span>LLM providers unified</span></div>
-            <div><strong>Docker</strong><span>+ PostgreSQL + Azure</span></div>
-          </div>
-        </div>
-        <div class="case-card reveal">
-          <span class="case-card__tag">Healthcare / Manufacturing · Predictive ML</span>
-          <h3>BMR Predictive Maintenance</h3>
-          <p>9-stage ML pipeline (BiLSTM + Autoencoder) for early prediction of medical device failures, served via FastAPI + Streamlit with SHAP explainability dashboards.</p>
-          <div class="case-card__stats">
-            <div><strong data-count="-15" data-suffix="%">-15%</strong><span>unplanned failures</span></div>
-            <div><strong data-count="40" data-prefix="+" data-suffix="%">+40%</strong><span>faster root-cause diagnosis</span></div>
-            <div><strong>SHAP</strong><span>explainability built-in</span></div>
-          </div>
-        </div>
+        <h2 class="section__title">Selected work &amp; personal builds</h2>
+        <p class="section__subtitle">Production case studies from client work, then three end-to-end personal products with demo videos.</p>
       </div>
 
-      <!-- ===== Featured: Pathora ===== -->
-      <div class="featured reveal" id="pathora">
-        <div class="featured__header">
-          <div>
-            <p class="section__eyebrow">Featured project</p>
-            <h2 class="section__title">Pathora — Door-to-door AI Trip Guide</h2>
-            <p class="section__subtitle featured__lede">
-              Turn a one-line “origin → destination” into a blindly-followable travel guide —
-              nearby stations, flights, trains, multi-leg buses, hotels, weather, and a day-by-day itinerary.
-            </p>
+      <div class="projects-block reveal">
+        <div class="projects-block__head">
+          <h3 class="projects-block__title">Professional case studies</h3>
+          <p class="projects-block__lede">Systems shipped at DataToBiz &amp; AISPRY — grading, multi-LLM orchestration, and predictive maintenance.</p>
+        </div>
+        <div class="case-grid">
+          <div class="case-card reveal">
+            <span class="case-card__tag">Education · GenAI Vision</span>
+            <h3>Automated Grading System</h3>
+            <p>5-stage async pipeline (Flask + Celery + Redis) grading handwritten exam scripts via Gemini 2.5 Pro Vision — parsing, LLM evaluation, and annotated PDF generation.</p>
+            <div class="case-card__stats">
+              <div><strong data-count="1000" data-suffix="+">1,000+</strong><span>scripts / cycle</span></div>
+              <div><strong data-count="92" data-suffix="%">92%</strong><span>marking consistency</span></div>
+              <div><strong>Days→Min</strong><span>turnaround</span></div>
+            </div>
           </div>
-          <div class="featured__links">
-            <a href="https://pathora.onrender.com" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
-              Live demo <svg width="14" height="14"><use href="#icon-arrow"/></svg>
-            </a>
-            <a href="https://github.com/Chaithanya1335/TravelAgent" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">
-              <svg width="16" height="16"><use href="#icon-github"/></svg> GitHub
-            </a>
+          <div class="case-card reveal">
+            <span class="case-card__tag">Media &amp; Marketing · Multi-LLM</span>
+            <h3>AI Persona Emulation Engine</h3>
+            <p>6-stage async LLM pipeline generating synthetic brand personas, with multi-provider abstraction (GPT-4o, Claude, Gemini, Perplexity) and automatic failover.</p>
+            <div class="case-card__stats">
+              <div><strong data-count="70" data-suffix="%">70%</strong><span>faster persona workflows</span></div>
+              <div><strong data-count="4">4</strong><span>LLM providers unified</span></div>
+              <div><strong>Docker</strong><span>+ PostgreSQL + Azure</span></div>
+            </div>
+          </div>
+          <div class="case-card reveal">
+            <span class="case-card__tag">Healthcare / Manufacturing · Predictive ML</span>
+            <h3>BMR Predictive Maintenance</h3>
+            <p>9-stage ML pipeline (BiLSTM + Autoencoder) for early prediction of medical device failures, served via FastAPI + Streamlit with SHAP explainability dashboards.</p>
+            <div class="case-card__stats">
+              <div><strong data-count="-15" data-suffix="%">-15%</strong><span>unplanned failures</span></div>
+              <div><strong data-count="40" data-prefix="+" data-suffix="%">+40%</strong><span>faster root-cause diagnosis</span></div>
+              <div><strong>SHAP</strong><span>explainability built-in</span></div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="featured__about">
-          <div class="featured__about-card">
-            <h3>What is Pathora?</h3>
-            <p>
-              Pathora is an <strong>agentic travel planner</strong> you talk to in plain language or through a guided form.
-              You give it origin, destination, dates, budget, and interests — it runs a LangGraph loop with Gemini and
-              <strong>18 live tools</strong> (flights, trains, buses, hotels, stations, weather, web search) and builds a
-              complete trip guide you can follow without guessing.
-            </p>
-            <p>
-              Unlike a generic chatbot that answers “fly or take a train,” Pathora researches real options, names actual
-              stations and services, and stitches <strong>first mile → main journey → last mile</strong> into one structured plan.
-              A side <strong>Pathora Assistant</strong> answers follow-up questions grounded in that plan.
-            </p>
-          </div>
-          <div class="featured__about-card featured__about-card--output">
-            <h3>What it generates</h3>
-            <p class="featured__about-intro">From one trip request, Pathora produces a full door-to-door travel pack:</p>
-            <ul class="featured__output-list">
-              <li>
-                <strong>Journey options</strong>
-                <span>Flight, train (via nearby stations), and multi-leg bus routes with times, costs, and difficulty</span>
-              </li>
-              <li>
-                <strong>First &amp; last mile</strong>
-                <span>How to get from home to the station/airport, and from arrival to your hotel</span>
-              </li>
-              <li>
-                <strong>Stay recommendations</strong>
-                <span>Hotels and areas matched to budget and interests, pulled from live data</span>
-              </li>
-              <li>
-                <strong>Day-by-day itinerary</strong>
-                <span>Places to visit, food, and timing a first-time traveler can actually follow</span>
-              </li>
-              <li>
-                <strong>Weather, budget &amp; packing</strong>
-                <span>Weekly weather, rough cost estimate, local transport tips, and a packing checklist</span>
-              </li>
-              <li>
-                <strong>Plan-aware chat</strong>
-                <span>Ask “which train is best?” or “cheaper hotel?” and get answers grounded in your plan</span>
-              </li>
-            </ul>
-          </div>
+      <div class="projects-block reveal" id="personal-projects">
+        <div class="projects-block__head">
+          <h3 class="projects-block__title">Personal projects</h3>
+          <p class="projects-block__lede">Click a project to open its page — full write-up, tech stack, and demo video.</p>
         </div>
 
-        <div class="featured__media">
-          <div class="featured__hero">
-            <img
-              id="featuredMainImg"
-              src="assets/projects/pathora/01_hero_pathora.png"
-              alt="Pathora hero — door-to-door AI trip planner"
-              width="1200"
-              height="675"
-              loading="lazy"
-            />
-            <span class="featured__caption" id="featuredCaption">Landing · brand &amp; guided planner</span>
-          </div>
-          <div class="featured__thumbs" id="featuredThumbs" role="tablist" aria-label="Pathora screenshots">
-            <button type="button" class="featured__thumb is-active" data-src="assets/projects/pathora/01_hero_pathora.png" data-caption="Landing · brand &amp; guided planner" aria-label="Hero screenshot">
+        <div class="spotlight-grid">
+          <a class="spotlight-card" href="projects/career-pilot.html">
+            <div class="spotlight-card__media">
+              <img src="assets/projects/career-pilot/01-today-copilot.png" alt="" loading="lazy" />
+              <span class="spotlight-card__play" aria-hidden="true"><svg width="18" height="18"><use href="#icon-play"/></svg></span>
+            </div>
+            <div class="spotlight-card__body">
+              <span class="spotlight-card__tag">01 · Agents</span>
+              <h3>Gnana's Career Pilot</h3>
+              <p>Local-first AI job-search co-pilot — fit ranking, résumé tailoring, human-in-the-loop apply.</p>
+              <span class="spotlight-card__cta">Open project <svg width="14" height="14"><use href="#icon-arrow"/></svg></span>
+            </div>
+          </a>
+
+          <a class="spotlight-card" href="projects/mediconsult.html">
+            <div class="spotlight-card__media">
+              <img src="assets/projects/mediconsult/landing-overview.png" alt="" loading="lazy" />
+              <span class="spotlight-card__play" aria-hidden="true"><svg width="18" height="18"><use href="#icon-play"/></svg></span>
+            </div>
+            <div class="spotlight-card__body">
+              <span class="spotlight-card__tag">02 · RAG · Vision</span>
+              <h3>MediConsult AI</h3>
+              <p>Medical chatbot with evidence-backed RAG answers and YOLOv8 skin-image screening.</p>
+              <span class="spotlight-card__cta">Open project <svg width="14" height="14"><use href="#icon-arrow"/></svg></span>
+            </div>
+          </a>
+
+          <a class="spotlight-card" href="projects/pathora.html">
+            <div class="spotlight-card__media">
               <img src="assets/projects/pathora/01_hero_pathora.png" alt="" loading="lazy" />
-            </button>
-            <button type="button" class="featured__thumb" data-src="assets/projects/pathora/05_agent_research.png" data-caption="Live agent research · multi-tool progress via SSE" aria-label="Agent research screenshot">
-              <img src="assets/projects/pathora/05_agent_research.png" alt="" loading="lazy" />
-            </button>
-            <button type="button" class="featured__thumb" data-src="assets/projects/pathora/07_journey_options.png" data-caption="Door-to-door options · flight, nearby stations, multi-leg bus" aria-label="Journey options screenshot">
-              <img src="assets/projects/pathora/07_journey_options.png" alt="" loading="lazy" />
-            </button>
-            <button type="button" class="featured__thumb" data-src="assets/projects/pathora/06_plan_overview.png" data-caption="Structured travel plan overview from live data" aria-label="Plan overview screenshot">
-              <img src="assets/projects/pathora/06_plan_overview.png" alt="" loading="lazy" />
-            </button>
-            <button type="button" class="featured__thumb" data-src="assets/projects/pathora/09_day_by_day.png" data-caption="Day-by-day itinerary a first-time traveler can follow" aria-label="Day-by-day screenshot">
-              <img src="assets/projects/pathora/09_day_by_day.png" alt="" loading="lazy" />
-            </button>
-            <button type="button" class="featured__thumb" data-src="assets/projects/pathora/10_assistant_with_plan.png" data-caption="Pathora Assistant · chat grounded in the generated plan" aria-label="Assistant screenshot">
-              <img src="assets/projects/pathora/10_assistant_with_plan.png" alt="" loading="lazy" />
-            </button>
-            <button type="button" class="featured__thumb" data-src="assets/projects/pathora/01_architecture_flow_dark.png" data-caption="Architecture · LangGraph planner ↔ tools with cache &amp; guards" aria-label="Architecture diagram">
-              <img src="assets/projects/pathora/01_architecture_flow_dark.png" alt="" loading="lazy" />
-            </button>
-          </div>
-        </div>
-
-        <div class="featured__body">
-          <div class="featured__problem">
-            <h3>The problem</h3>
-            <p>
-              Generic chatbots say “take a train or fly.” They never name the station, the train, how to get from
-              home to that station, or what to do when there’s no direct route — exactly when first-time travelers need certainty.
-            </p>
-          </div>
-          <div class="featured__solution">
-            <h3>The solution</h3>
-            <p>
-              A <strong>LangGraph</strong> agent drives <strong>Gemini Pro</strong> through <strong>18 live tools</strong>
-              (search, flights, hotels, stations, weather, routing) and synthesizes a structured door-to-door guide —
-              first mile → main legs → transfers → last mile → return — with a plan-grounded side assistant for follow-ups.
-            </p>
-          </div>
-        </div>
-
-        <div class="featured__stats">
-          <div><strong data-count="18">18</strong><span>live research tools</span></div>
-          <div><strong>LangGraph</strong><span>planner ⇄ tool loop</span></div>
-          <div><strong>SSE</strong><span>streaming progress</span></div>
-          <div><strong>Free-tier</strong><span>cache · rate-limit · metrics</span></div>
-        </div>
-
-        <ul class="featured__highlights">
-          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Door-to-door journeys — home → station/airport → legs → hotel, nothing skipped</li>
-          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Nearby stations &amp; multi-leg routing when no direct bus/train exists</li>
-          <li><svg width="16" height="16"><use href="#icon-check"/></svg> TTL cache at the I/O boundary + concurrency shedding for free-tier quotas</li>
-          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Docker on Render with <code>/health</code> &amp; <code>/metrics</code> observability</li>
-        </ul>
-
-        <div class="tags featured__stack">
-          <span>Gemini 2.5 Pro / Flash</span>
-          <span>LangGraph</span>
-          <span>LangChain</span>
-          <span>Flask + SSE</span>
-          <span>Brave Search / SerpAPI</span>
-          <span>Docker</span>
-          <span>Render</span>
-          <span>gunicorn gthread</span>
+              <span class="spotlight-card__play" aria-hidden="true"><svg width="18" height="18"><use href="#icon-play"/></svg></span>
+            </div>
+            <div class="spotlight-card__body">
+              <span class="spotlight-card__tag">03 · Travel agent</span>
+              <h3>Pathora</h3>
+              <p>Door-to-door AI trip guide with LangGraph, Gemini, and 18 live research tools.</p>
+              <span class="spotlight-card__cta">Open project <svg width="14" height="14"><use href="#icon-arrow"/></svg></span>
+            </div>
+          </a>
         </div>
       </div>
 
-      <div class="reveal" style="margin-top:4rem;">
-        <p class="section__eyebrow">Open Source</p>
-        <h2 class="section__title">More personal projects</h2>
-        <p class="section__subtitle">Side projects focused on agents, retrieval, vision, and MLOps.</p>
+      <div class="reveal more-projects-head">
+        <p class="section__eyebrow">Also shipping</p>
+        <h2 class="section__title">More open-source work</h2>
+        <p class="section__subtitle">Additional projects across retrieval, agents, and MLOps.</p>
       </div>
 
       <div class="filters reveal" id="filters">
         <button class="filter-btn is-active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="rag">RAG &amp; Retrieval</button>
         <button class="filter-btn" data-filter="agents">Agents</button>
-        <button class="filter-btn" data-filter="vision">Vision / Medical</button>
         <button class="filter-btn" data-filter="mlops">MLOps</button>
       </div>
 
@@ -674,6 +582,6 @@
   <svg width="18" height="18" style="transform:rotate(-90deg)"><use href="#icon-arrow"/></svg>
 </button>
 
-<script src="js/script.js?v=3"></script>
+<script src="js/script.js?v=9"></script>
 </body>
 </html>

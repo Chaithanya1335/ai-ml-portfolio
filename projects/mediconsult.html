@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MediConsult AI — Project | Gnana Chaithanya</title>
+<meta name="description" content="MediConsult AI — dual-modality medical chatbot with RAG, YOLOv8 skin screening, and FastAPI." />
+<meta name="theme-color" content="#05070d" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)" />
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=9" />
+</head>
+<body class="project-page">
+
+<svg style="display:none">
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5.5 5.5L20 7"/></symbol>
+  <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+  <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+</svg>
+
+<header class="nav is-scrolled" id="nav">
+  <div class="container nav__inner">
+    <a href="../index.html" class="nav__brand">GC<span>.</span></a>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light / dark theme">
+        <svg class="icon-sun" width="19" height="19"><use href="#icon-sun"/></svg>
+        <svg class="icon-moon" width="18" height="18"><use href="#icon-moon"/></svg>
+      </button>
+      <a href="../index.html#projects" class="btn btn--sm btn--ghost">
+        <svg width="14" height="14" style="transform:rotate(180deg)"><use href="#icon-arrow"/></svg>
+        Back to portfolio
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="project-detail">
+  <div class="container">
+    <p class="section__eyebrow">Personal project · RAG · Vision · Healthcare</p>
+    <h1 class="project-detail__title">MediConsult AI</h1>
+    <p class="project-detail__lede">
+      Dual-modality medical assistant: evidence-backed Q&amp;A over a medical knowledge base plus
+      YOLOv8 skin-image screening, with persistent sessions, multilingual UI, and realtime notifications.
+    </p>
+
+    <section class="project-detail__section">
+      <h2>About this project</h2>
+      <p>
+        Generic chatbots invent medical answers. Patients and clinicians need retrieval-backed responses
+        with sources, plus a path for visual skin concerns — in one deployable product.
+      </p>
+      <p>
+        MediConsult AI combines <strong>FastAPI + FAISS</strong> retrieval with guarded generation (Groq LLaMA),
+        YOLO-based skin analysis, persistent SQLite sessions, SSE notifications, auth, dark/light themes, and
+        multilingual routing — packaged with Docker for Render.
+      </p>
+    </section>
+
+    <section class="project-detail__section">
+      <h2>What it does</h2>
+      <ul class="project-detail__list">
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Evidence-backed answers with confidence states and source snippets</li>
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Skin-image analysis workflow for multimodal consultations</li>
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Persistent sessions, exportable transcripts, local + Google auth</li>
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Offline-safe fallbacks when hosted embeddings/LLMs are unavailable</li>
+      </ul>
+    </section>
+
+    <section class="project-detail__section">
+      <h2>Tech stack</h2>
+      <div class="tags">
+        <span>FastAPI</span>
+        <span>FAISS</span>
+        <span>Groq LLaMA3</span>
+        <span>LangChain</span>
+        <span>YOLOv8</span>
+        <span>SQLAlchemy</span>
+        <span>SQLite</span>
+        <span>SSE</span>
+        <span>Docker</span>
+      </div>
+    </section>
+
+    <section class="project-detail__section project-detail__video-block">
+      <h2>Demo video</h2>
+      <p>Feature walkthrough of MediConsult AI with voice narration.</p>
+      <div class="project-detail__video">
+        <video controls playsinline preload="metadata" poster="../assets/projects/mediconsult/landing-overview.png">
+          <source src="../assets/projects/mediconsult/demo.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <div class="project-detail__footer">
+      <a href="../index.html#projects" class="btn btn--primary">
+        <svg width="14" height="14" style="transform:rotate(180deg)"><use href="#icon-arrow"/></svg>
+        Back to all projects
+      </a>
+      <a href="https://github.com/Chaithanya1335/Medical_Chatbot" class="btn btn--ghost" target="_blank" rel="noopener">
+        <svg width="16" height="16"><use href="#icon-github"/></svg> GitHub
+      </a>
+    </div>
+  </div>
+</main>
+
+<script src="../js/project-page.js?v=1"></script>
+</body>
+</html>
