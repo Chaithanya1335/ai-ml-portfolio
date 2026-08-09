@@ -51,33 +51,33 @@
 
 <main class="project-detail">
   <div class="container">
-    <p class="section__eyebrow">Personal project · RAG · Vision · Healthcare</p>
+    <p class="section__eyebrow">Personal project · Healthcare</p>
     <h1 class="project-detail__title">MediConsult AI</h1>
     <p class="project-detail__lede">
-      Dual-modality medical assistant: evidence-backed Q&amp;A over a medical knowledge base plus
-      YOLOv8 skin-image screening, with persistent sessions, multilingual UI, and realtime notifications.
+      A medical chatbot you can ask health questions and upload skin photos to —
+      answers come with sources, not random guesses.
     </p>
 
     <section class="project-detail__section">
       <h2>About this project</h2>
       <p>
-        Generic chatbots invent medical answers. Patients and clinicians need retrieval-backed responses
-        with sources, plus a path for visual skin concerns — in one deployable product.
+        Normal chatbots often make up medical advice. That’s risky. People need answers grounded in
+        real medical information, and a simple way to check skin concerns with a photo.
       </p>
       <p>
-        MediConsult AI combines <strong>FastAPI + FAISS</strong> retrieval with guarded generation (Groq LLaMA),
-        YOLO-based skin analysis, persistent SQLite sessions, SSE notifications, auth, dark/light themes, and
-        multilingual routing — packaged with Docker for Render.
+        <strong>MediConsult AI</strong> is a web app that searches a medical knowledge base before it
+        answers, shows where the info came from, and can look at skin images. You can save chats,
+        switch languages, and use it in dark or light mode. It’s packaged so it can be deployed easily.
       </p>
     </section>
 
     <section class="project-detail__section">
       <h2>What it does</h2>
       <ul class="project-detail__list">
-        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Evidence-backed answers with confidence states and source snippets</li>
-        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Skin-image analysis workflow for multimodal consultations</li>
-        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Persistent sessions, exportable transcripts, local + Google auth</li>
-        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Offline-safe fallbacks when hosted embeddings/LLMs are unavailable</li>
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Answers health questions using medical documents — with source snippets</li>
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Lets you upload a skin photo for a visual check</li>
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Saves consultation history so you can come back later</li>
+        <li><svg width="16" height="16"><use href="#icon-check"/></svg> Works in multiple languages, with dark/light theme and live alerts</li>
       </ul>
     </section>
 
